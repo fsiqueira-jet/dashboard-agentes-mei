@@ -311,7 +311,7 @@ with tab2:
                 r=vals + [vals[0]],
                 theta=categories + [categories[0]],
                 fill="toself",
-                fillcolor=CITY_COLORS.get(selected_city, "#2563eb") + "33",
+                fillcolor="rgba({},{},{},0.2)".format(*bytes.fromhex(CITY_COLORS.get(selected_city, "#2563eb").lstrip("#"))),
                 line_color=CITY_COLORS.get(selected_city, "#2563eb"),
                 name=selected_city,
             ))
